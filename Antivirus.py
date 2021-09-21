@@ -6,6 +6,26 @@ database = ''
 virus = ''
 database_num = int('48')
 
+#Load hash database
+        print('Loading HASH database')
+
+        with open('AntivirusDabase\\Virus.txt') as file:
+                for line in file:
+                    database = database + line + ''
+                print('Database ' + '0' + ' load')
+
+        comptador=1
+        
+        for i in range(0, database_num):
+            
+            with open("AntivirusDabase\\Virus" + str(comptador) + '.txt') as file:
+                for line in file:
+                    database = database + line + ''
+                print('Database ' + str(comptador) + ' load')
+                
+                comptador = comptador + 1
+              
+
 #Make funcion's
 
 def getmd5file(archivo):
@@ -31,27 +51,6 @@ while True:
         input()
     else:
         print('Hash is ' + HASH_file)
-
-    #Load hash database
-        print('Loading HASH database')
-
-        with open('AntivirusDabase\\Virus.txt') as file:
-                for line in file:
-                    database = database + line + ''
-                print('Database ' + '0' + ' load')
-
-        comptador=1
-        
-        for i in range(0, database_num):
-            
-            with open("AntivirusDabase\\Virus" + str(comptador) + '.txt') as file:
-                for line in file:
-                    database = database + line + ''
-                print('Database ' + str(comptador) + ' load')
-                
-                comptador = comptador + 1
-                
-                
 
         print('Checking HASH in database')
 
