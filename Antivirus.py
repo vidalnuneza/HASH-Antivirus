@@ -12,7 +12,7 @@ print('Loading HASH database')
 with open('AntivirusDabase\\Virus.txt') as file:
         for line in file:
             database = database + line + ''
-        print('Database ' + '0' + ' load')
+        print('Database ' + '0' + ' out of ' + str(database_num) + ' loaded')
 
 comptador=1
         
@@ -21,7 +21,7 @@ for i in range(0, database_num):
      with open("AntivirusDabase\\Virus" + str(comptador) + '.txt') as file:
         for line in file:
             database = database + line + ''
-        print('Database ' + str(comptador) + ' load')
+        print('Database ' + str(comptador) + ' out of ' + str(database_num) + ' loaded')
                 
         comptador = comptador + 1
               
