@@ -4,7 +4,7 @@ import hashlib
 
 database = ''
 virus = ''
-database_num = int('48')
+database_num = int('42')
 
 with open("ICONS/icon.txt") as file:
     for line in file:
