@@ -6,6 +6,13 @@ database = ''
 virus = ''
 database_num = int('48')
 
+with open("ICONS/icon.txt") as file:
+    for line in file:
+        print(line.rstrip())
+file.close
+
+input("Press Enter to load database")
+
 #Load hash database
 print('Loading HASH database')
 
@@ -17,8 +24,8 @@ with open('AntivirusDabase\\Virus.txt') as file:
 comptador=1
         
 for i in range(0, database_num):
-            
-     with open("AntivirusDabase\\Virus" + str(comptador) + '.txt') as file:
+
+    with open("AntivirusDabase\\Virus" + str(comptador) + '.txt') as file:
         for line in file:
             database = database + line + ''
         print('Database ' + str(comptador) + ' out of ' + str(database_num) + ' loaded')
